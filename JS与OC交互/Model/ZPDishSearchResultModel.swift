@@ -11,4 +11,5 @@ import UIKit
 class ZPDishSearchResultModel: NSObject {
     var title: NSString?
     var hrefHTML: NSString?
+    var subTitle: NSString?
 }

@@ -268,6 +268,12 @@
 {
     [self removeCover];
 }
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    
+        [_searchBar resignFirstResponder];
+//    }
+}
 //移除遮盖
 - (void)removeCover
 {
@@ -284,11 +290,6 @@
     
     // 3.退出键盘
     [_searchBar resignFirstResponder];
-}
-- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
-{
-    
-    return YES;
 }
 - (void)handleClick:(UITapGestureRecognizer *)gesture
 {

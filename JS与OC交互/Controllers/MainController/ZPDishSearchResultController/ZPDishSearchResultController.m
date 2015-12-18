@@ -23,22 +23,31 @@
     [super viewDidLoad];
     
     arrays = [NSMutableArray array];
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     pageIndex = 1;
   
 }
 - (void)setSearchText:(NSString *)searchText
 {
     _searchText = searchText;
+    
+    if (arrays.count) {
+        [arrays removeAllObjects];
+    }
     NSString * url = [NSString stringWithFormat:@"http://so.meishi.cc/ajax/ajaxtitle.php?words=%@",_searchText];
     [[ZPHTTPClient shareClient]requestWithMethod:get url:url pramater:nil response:^(NSError *error, id responese) {
-        
         TFHpple * hpple = [[TFHpple alloc]initWithHTMLData:responese];
         NSArray * array =  [hpple searchWithXPathQuery:@"//a"];
         for (TFHppleElement * e in array) {
             ZPDishSearchResultModel * m = [ZPDishSearchResultModel new];
             m.title = e.text;
+
             if ([e objectForKey:@"href"]) {
                  m.hrefHTML = [e objectForKey:@"href"];
+            }
+            if (e.hasChildren && [e.firstChild.tagName isEqualToString:@"span"]) {
+                m.subTitle = e.firstChild.text;
+                
             }
             [arrays addObject:m];
             
@@ -62,56 +71,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"cell"];
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        cell.textLabel.textColor = [UIColor blueColor];
+        cell.detailTextLabel.font = cell.textLabel.font;
+        cell.detailTextLabel.textColor = [UIColor blackColor];
     }
     ZPDishSearchResultModel * m = arrays[indexPath.row];
     cell.textLabel.text = m.title;
+    cell.detailTextLabel.text = m.subTitle;
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
