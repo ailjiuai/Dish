@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		067612BF30D0F979BFC8F8AF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D818D3183A10EC0FB75B1 /* Pods.framework */; };
+		F44933A51C214536009EFA68 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44933A41C214536009EFA68 /* WebKit.framework */; };
+		F4F60CA61C23CA6B0021457F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C711C23CA6B0021457F /* Assets.xcassets */; };
+		F4F60CA71C23CA6B0021457F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C731C23CA6B0021457F /* LaunchScreen.storyboard */; };
+		F4F60CA81C23CA6B0021457F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C751C23CA6B0021457F /* Main.storyboard */; };
+		F4F60CA91C23CA6B0021457F /* NSString+ZP_MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C791C23CA6B0021457F /* NSString+ZP_MD5.m */; };
+		F4F60CAA1C23CA6B0021457F /* UIImageView+DishImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C7B1C23CA6B0021457F /* UIImageView+DishImage.m */; };
+		F4F60CAB1C23CA6B0021457F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C7F1C23CA6B0021457F /* MainController.m */; };
+		F4F60CAC1C23CA6B0021457F /* ZPDishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C811C23CA6B0021457F /* ZPDishCell.m */; };
+		F4F60CAD1C23CA6B0021457F /* ZPDishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C821C23CA6B0021457F /* ZPDishCell.xib */; };
+		F4F60CAE1C23CA6B0021457F /* ZPDishSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C851C23CA6B0021457F /* ZPDishSearchResultController.m */; };
+		F4F60CAF1C23CA6B0021457F /* ZPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C881C23CA6B0021457F /* ZPNavigationController.m */; };
+		F4F60CB01C23CA6B0021457F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C8B1C23CA6B0021457F /* ViewController.m */; };
+		F4F60CB11C23CA6B0021457F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C8D1C23CA6B0021457F /* main.m */; };
+		F4F60CB21C23CA6B0021457F /* ZPDishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C8F1C23CA6B0021457F /* ZPDishModel.swift */; };
+		F4F60CB31C23CA6B0021457F /* ZPDishSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C901C23CA6B0021457F /* ZPDishSearchResultModel.swift */; };
+		F4F60CB41C23CA6B0021457F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C931C23CA6B0021457F /* AppDelegate.m */; };
+		F4F60CB51C23CA6B0021457F /* article.html in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C961C23CA6B0021457F /* article.html */; };
+		F4F60CB61C23CA6B0021457F /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C971C23CA6B0021457F /* common.css */; };
+		F4F60CB71C23CA6B0021457F /* imghandler.js in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C981C23CA6B0021457F /* imghandler.js */; };
+		F4F60CB81C23CA6B0021457F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C991C23CA6B0021457F /* Info.plist */; };
+		F4F60CB91C23CA6B0021457F /* videohandler.js in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C9A1C23CA6B0021457F /* videohandler.js */; };
+		F4F60CBA1C23CA6B0021457F /* ZPArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C9D1C23CA6B0021457F /* ZPArticle.m */; };
+		F4F60CBB1C23CA6B0021457F /* ZPHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60C9F1C23CA6B0021457F /* ZPHTTPClient.m */; };
+		F4F60CBC1C23CA6B0021457F /* ZPImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA01C23CA6B0021457F /* ZPImageCache.swift */; };
+		F4F60CBD1C23CA6B0021457F /* ZPImageCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA11C23CA6B0021457F /* ZPImageCacheProtocol.swift */; };
+		F4F60CBE1C23CA6B0021457F /* ZPObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA21C23CA6B0021457F /* ZPObjectResponse.swift */; };
+		F4F60CBF1C23CA6B0021457F /* ZPCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA51C23CA6B0021457F /* ZPCoverView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		184D818D3183A10EC0FB75B1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		817C28CCBF6C98BEAB231FF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C2D20F4447690F6092C7055B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F44933A41C214536009EFA68 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F4AD6F911C1E9E6D0013845E /* LearnDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AD6F951C1E9E6D0013845E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4F60C711C23CA6B0021457F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4F60C741C23CA6B0021457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4F60C761C23CA6B0021457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		F4F60C781C23CA6B0021457F /* NSString+ZP_MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZP_MD5.h"; sourceTree = "<group>"; };
+		F4F60C791C23CA6B0021457F /* NSString+ZP_MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZP_MD5.m"; sourceTree = "<group>"; };
+		F4F60C7A1C23CA6B0021457F /* UIImageView+DishImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DishImage.h"; sourceTree = "<group>"; };
+		F4F60C7B1C23CA6B0021457F /* UIImageView+DishImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DishImage.m"; sourceTree = "<group>"; };
+		F4F60C7E1C23CA6B0021457F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		F4F60C7F1C23CA6B0021457F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		F4F60C801C23CA6B0021457F /* ZPDishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPDishCell.h; sourceTree = "<group>"; };
+		F4F60C811C23CA6B0021457F /* ZPDishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPDishCell.m; sourceTree = "<group>"; };
+		F4F60C821C23CA6B0021457F /* ZPDishCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZPDishCell.xib; sourceTree = "<group>"; };
+		F4F60C841C23CA6B0021457F /* ZPDishSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPDishSearchResultController.h; sourceTree = "<group>"; };
+		F4F60C851C23CA6B0021457F /* ZPDishSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPDishSearchResultController.m; sourceTree = "<group>"; };
+		F4F60C871C23CA6B0021457F /* ZPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPNavigationController.h; sourceTree = "<group>"; };
+		F4F60C881C23CA6B0021457F /* ZPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPNavigationController.m; sourceTree = "<group>"; };
+		F4F60C8A1C23CA6B0021457F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F4F60C8B1C23CA6B0021457F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4F60C8C1C23CA6B0021457F /* JS与OC交互-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JS与OC交互-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4F60C8D1C23CA6B0021457F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4F60C8F1C23CA6B0021457F /* ZPDishModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPDishModel.swift; sourceTree = "<group>"; };
+		F4F60C901C23CA6B0021457F /* ZPDishSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPDishSearchResultModel.swift; sourceTree = "<group>"; };
+		F4F60C921C23CA6B0021457F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4F60C931C23CA6B0021457F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4F60C941C23CA6B0021457F /* OC-SW-Bridege.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OC-SW-Bridege.h"; sourceTree = "<group>"; };
+		F4F60C961C23CA6B0021457F /* article.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = article.html; sourceTree = "<group>"; };
+		F4F60C971C23CA6B0021457F /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
+		F4F60C981C23CA6B0021457F /* imghandler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = imghandler.js; sourceTree = "<group>"; };
+		F4F60C991C23CA6B0021457F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F60C9A1C23CA6B0021457F /* videohandler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = videohandler.js; sourceTree = "<group>"; };
+		F4F60C9C1C23CA6B0021457F /* ZPArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPArticle.h; sourceTree = "<group>"; };
+		F4F60C9D1C23CA6B0021457F /* ZPArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPArticle.m; sourceTree = "<group>"; };
+		F4F60C9E1C23CA6B0021457F /* ZPHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPHTTPClient.h; sourceTree = "<group>"; };
+		F4F60C9F1C23CA6B0021457F /* ZPHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPHTTPClient.m; sourceTree = "<group>"; };
+		F4F60CA01C23CA6B0021457F /* ZPImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPImageCache.swift; sourceTree = "<group>"; };
+		F4F60CA11C23CA6B0021457F /* ZPImageCacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPImageCacheProtocol.swift; sourceTree = "<group>"; };
+		F4F60CA21C23CA6B0021457F /* ZPObjectResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPObjectResponse.swift; sourceTree = "<group>"; };
+		F4F60CA41C23CA6B0021457F /* ZPCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPCoverView.h; sourceTree = "<group>"; };
+		F4F60CA51C23CA6B0021457F /* ZPCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPCoverView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4AD6F8E1C1E9E6D0013845E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F44933A51C214536009EFA68 /* WebKit.framework in Frameworks */,
+				067612BF30D0F979BFC8F8AF /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECEA7139FFF190D714767B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F44933A41C214536009EFA68 /* WebKit.framework */,
+				184D818D3183A10EC0FB75B1 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4AD6F881C1E9E6C0013845E = {
+			isa = PBXGroup;
+			children = (
+				F4AD6F931C1E9E6D0013845E /* JS与OC交互 */,
+				F4AD6F921C1E9E6D0013845E /* Products */,
+				F65E748E96B46D672FCFE065 /* Pods */,
+				ECEA7139FFF190D714767B77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4AD6F921C1E9E6D0013845E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD6F911C1E9E6D0013845E /* LearnDish.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4AD6F931C1E9E6D0013845E /* JS与OC交互 */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C711C23CA6B0021457F /* Assets.xcassets */,
+				F4F60C721C23CA6B0021457F /* Base.lproj */,
+				F4F60C771C23CA6B0021457F /* Category */,
+				F4F60C7C1C23CA6B0021457F /* Controllers */,
+				F4F60C8C1C23CA6B0021457F /* JS与OC交互-Bridging-Header.h */,
+				F4F60C8D1C23CA6B0021457F /* main.m */,
+				F4F60C8E1C23CA6B0021457F /* Model */,
+				F4F60C911C23CA6B0021457F /* other */,
+				F4F60C951C23CA6B0021457F /* Resources */,
+				F4F60C9B1C23CA6B0021457F /* Tools */,
+				F4F60CA31C23CA6B0021457F /* Views */,
+				F4AD6F941C1E9E6D0013845E /* Supporting Files */,
+			);
+			path = "JS与OC交互";
+			sourceTree = "<group>";
+		};
+		F4AD6F941C1E9E6D0013845E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD6F951C1E9E6D0013845E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4F60C721C23CA6B0021457F /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C731C23CA6B0021457F /* LaunchScreen.storyboard */,
+				F4F60C751C23CA6B0021457F /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		F4F60C771C23CA6B0021457F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C781C23CA6B0021457F /* NSString+ZP_MD5.h */,
+				F4F60C791C23CA6B0021457F /* NSString+ZP_MD5.m */,
+				F4F60C7A1C23CA6B0021457F /* UIImageView+DishImage.h */,
+				F4F60C7B1C23CA6B0021457F /* UIImageView+DishImage.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F4F60C7C1C23CA6B0021457F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C7D1C23CA6B0021457F /* MainController */,
+				F4F60C861C23CA6B0021457F /* Other */,
+				F4F60C891C23CA6B0021457F /* ZPArticleController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4F60C7D1C23CA6B0021457F /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C7E1C23CA6B0021457F /* MainController.h */,
+				F4F60C7F1C23CA6B0021457F /* MainController.m */,
+				F4F60C801C23CA6B0021457F /* ZPDishCell.h */,
+				F4F60C811C23CA6B0021457F /* ZPDishCell.m */,
+				F4F60C821C23CA6B0021457F /* ZPDishCell.xib */,
+				F4F60C831C23CA6B0021457F /* ZPDishSearchResultController */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		F4F60C831C23CA6B0021457F /* ZPDishSearchResultController */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C841C23CA6B0021457F /* ZPDishSearchResultController.h */,
+				F4F60C851C23CA6B0021457F /* ZPDishSearchResultController.m */,
+			);
+			path = ZPDishSearchResultController;
+			sourceTree = "<group>";
+		};
+		F4F60C861C23CA6B0021457F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C871C23CA6B0021457F /* ZPNavigationController.h */,
+				F4F60C881C23CA6B0021457F /* ZPNavigationController.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F4F60C891C23CA6B0021457F /* ZPArticleController */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C8A1C23CA6B0021457F /* ViewController.h */,
+				F4F60C8B1C23CA6B0021457F /* ViewController.m */,
+			);
+			path = ZPArticleController;
+			sourceTree = "<group>";
+		};
+		F4F60C8E1C23CA6B0021457F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C8F1C23CA6B0021457F /* ZPDishModel.swift */,
+				F4F60C901C23CA6B0021457F /* ZPDishSearchResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4F60C911C23CA6B0021457F /* other */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C921C23CA6B0021457F /* AppDelegate.h */,
+				F4F60C931C23CA6B0021457F /* AppDelegate.m */,
+				F4F60C941C23CA6B0021457F /* OC-SW-Bridege.h */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		F4F60C951C23CA6B0021457F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C961C23CA6B0021457F /* article.html */,
+				F4F60C971C23CA6B0021457F /* common.css */,
+				F4F60C981C23CA6B0021457F /* imghandler.js */,
+				F4F60C991C23CA6B0021457F /* Info.plist */,
+				F4F60C9A1C23CA6B0021457F /* videohandler.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4F60C9B1C23CA6B0021457F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60C9C1C23CA6B0021457F /* ZPArticle.h */,
+				F4F60C9D1C23CA6B0021457F /* ZPArticle.m */,
+				F4F60C9E1C23CA6B0021457F /* ZPHTTPClient.h */,
+				F4F60C9F1C23CA6B0021457F /* ZPHTTPClient.m */,
+				F4F60CA01C23CA6B0021457F /* ZPImageCache.swift */,
+				F4F60CA11C23CA6B0021457F /* ZPImageCacheProtocol.swift */,
+				F4F60CA21C23CA6B0021457F /* ZPObjectResponse.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F4F60CA31C23CA6B0021457F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60CA41C23CA6B0021457F /* ZPCoverView.h */,
+				F4F60CA51C23CA6B0021457F /* ZPCoverView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F65E748E96B46D672FCFE065 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2D20F4447690F6092C7055B /* Pods.debug.xcconfig */,
+				817C28CCBF6C98BEAB231FF1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4AD6F901C1E9E6D0013845E /* LearnDish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AD6FA81C1E9E6D0013845E /* Build configuration list for PBXNativeTarget "LearnDish" */;
+			buildPhases = (
+				F2189B18E790E225CBB6356F /* Check Pods Manifest.lock */,
+				F4AD6F8D1C1E9E6D0013845E /* Sources */,
+				F4AD6F8E1C1E9E6D0013845E /* Frameworks */,
+				F4AD6F8F1C1E9E6D0013845E /* Resources */,
+				3342AFCB43DF75959776BC0B /* Embed Pods Frameworks */,
+				02141E782ACA16AB07DFCA1B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnDish;
+			productName = "JS与OC交互";
+			productReference = F4AD6F911C1E9E6D0013845E /* LearnDish.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4AD6F891C1E9E6D0013845E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zp;
+				TargetAttributes = {
+					F4AD6F901C1E9E6D0013845E = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8P29D3TH83;
+					};
+				};
+			};
+			buildConfigurationList = F4AD6F8C1C1E9E6D0013845E /* Build configuration list for PBXProject "LearnDish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4AD6F881C1E9E6C0013845E;
+			productRefGroup = F4AD6F921C1E9E6D0013845E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4AD6F901C1E9E6D0013845E /* LearnDish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4AD6F8F1C1E9E6D0013845E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F60CB81C23CA6B0021457F /* Info.plist in Resources */,
+				F4F60CB91C23CA6B0021457F /* videohandler.js in Resources */,
+				F4F60CB71C23CA6B0021457F /* imghandler.js in Resources */,
+				F4F60CA81C23CA6B0021457F /* Main.storyboard in Resources */,
+				F4F60CAD1C23CA6B0021457F /* ZPDishCell.xib in Resources */,
+				F4F60CB51C23CA6B0021457F /* article.html in Resources */,
+				F4F60CA61C23CA6B0021457F /* Assets.xcassets in Resources */,
+				F4F60CB61C23CA6B0021457F /* common.css in Resources */,
+				F4F60CA71C23CA6B0021457F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02141E782ACA16AB07DFCA1B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3342AFCB43DF75959776BC0B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2189B18E790E225CBB6356F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4AD6F8D1C1E9E6D0013845E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F60CB41C23CA6B0021457F /* AppDelegate.m in Sources */,
+				F4F60CBE1C23CA6B0021457F /* ZPObjectResponse.swift in Sources */,
+				F4F60CB01C23CA6B0021457F /* ViewController.m in Sources */,
+				F4F60CAA1C23CA6B0021457F /* UIImageView+DishImage.m in Sources */,
+				F4F60CAE1C23CA6B0021457F /* ZPDishSearchResultController.m in Sources */,
+				F4F60CAC1C23CA6B0021457F /* ZPDishCell.m in Sources */,
+				F4F60CB31C23CA6B0021457F /* ZPDishSearchResultModel.swift in Sources */,
+				F4F60CBD1C23CA6B0021457F /* ZPImageCacheProtocol.swift in Sources */,
+				F4F60CAB1C23CA6B0021457F /* MainController.m in Sources */,
+				F4F60CA91C23CA6B0021457F /* NSString+ZP_MD5.m in Sources */,
+				F4F60CBC1C23CA6B0021457F /* ZPImageCache.swift in Sources */,
+				F4F60CBA1C23CA6B0021457F /* ZPArticle.m in Sources */,
+				F4F60CB11C23CA6B0021457F /* main.m in Sources */,
+				F4F60CBF1C23CA6B0021457F /* ZPCoverView.m in Sources */,
+				F4F60CB21C23CA6B0021457F /* ZPDishModel.swift in Sources */,
+				F4F60CAF1C23CA6B0021457F /* ZPNavigationController.m in Sources */,
+				F4F60CBB1C23CA6B0021457F /* ZPHTTPClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4F60C731C23CA6B0021457F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F60C741C23CA6B0021457F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4F60C751C23CA6B0021457F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F60C761C23CA6B0021457F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4AD6FA61C1E9E6D0013845E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4AD6FA71C1E9E6D0013845E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4AD6FA91C1E9E6D0013845E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D20F4447690F6092C7055B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "JS与OC交互/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zp.JS-OC--";
+				PRODUCT_NAME = LearnDish;
+				SWIFT_OBJC_BRIDGING_HEADER = "JS与OC交互/JS与OC交互-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4AD6FAA1C1E9E6D0013845E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817C28CCBF6C98BEAB231FF1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "JS与OC交互/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zp.JS-OC--";
+				PRODUCT_NAME = LearnDish;
+				SWIFT_OBJC_BRIDGING_HEADER = "JS与OC交互/JS与OC交互-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4AD6F8C1C1E9E6D0013845E /* Build configuration list for PBXProject "LearnDish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AD6FA61C1E9E6D0013845E /* Debug */,
+				F4AD6FA71C1E9E6D0013845E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AD6FA81C1E9E6D0013845E /* Build configuration list for PBXNativeTarget "LearnDish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AD6FA91C1E9E6D0013845E /* Debug */,
+				F4AD6FAA1C1E9E6D0013845E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4AD6F891C1E9E6D0013845E /* Project object */;
+}
