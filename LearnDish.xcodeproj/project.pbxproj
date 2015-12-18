@@ -35,6 +35,7 @@
 		F4F60CBD1C23CA6B0021457F /* ZPImageCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA11C23CA6B0021457F /* ZPImageCacheProtocol.swift */; };
 		F4F60CBE1C23CA6B0021457F /* ZPObjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA21C23CA6B0021457F /* ZPObjectResponse.swift */; };
 		F4F60CBF1C23CA6B0021457F /* ZPCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CA51C23CA6B0021457F /* ZPCoverView.m */; };
+		F4F60CC51C23E7390021457F /* ZPHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F60CC41C23E7390021457F /* ZPHTTPFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		F4F60CA21C23CA6B0021457F /* ZPObjectResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPObjectResponse.swift; sourceTree = "<group>"; };
 		F4F60CA41C23CA6B0021457F /* ZPCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPCoverView.h; sourceTree = "<group>"; };
 		F4F60CA51C23CA6B0021457F /* ZPCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPCoverView.m; sourceTree = "<group>"; };
+		F4F60CC31C23E7390021457F /* ZPHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPHTTPFetcher.h; sourceTree = "<group>"; };
+		F4F60CC41C23E7390021457F /* ZPHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPHTTPFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +259,7 @@
 		F4F60C9B1C23CA6B0021457F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4F60CC01C23E70A0021457F /* ZPHTTPFetcher */,
 				F4F60C9C1C23CA6B0021457F /* ZPArticle.h */,
 				F4F60C9D1C23CA6B0021457F /* ZPArticle.m */,
 				F4F60C9E1C23CA6B0021457F /* ZPHTTPClient.h */,
@@ -274,6 +278,15 @@
 				F4F60CA51C23CA6B0021457F /* ZPCoverView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F4F60CC01C23E70A0021457F /* ZPHTTPFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				F4F60CC31C23E7390021457F /* ZPHTTPFetcher.h */,
+				F4F60CC41C23E7390021457F /* ZPHTTPFetcher.m */,
+			);
+			path = ZPHTTPFetcher;
 			sourceTree = "<group>";
 		};
 		F65E748E96B46D672FCFE065 /* Pods */ = {
@@ -424,6 +437,7 @@
 				F4F60CAB1C23CA6B0021457F /* MainController.m in Sources */,
 				F4F60CA91C23CA6B0021457F /* NSString+ZP_MD5.m in Sources */,
 				F4F60CBC1C23CA6B0021457F /* ZPImageCache.swift in Sources */,
+				F4F60CC51C23E7390021457F /* ZPHTTPFetcher.m in Sources */,
 				F4F60CBA1C23CA6B0021457F /* ZPArticle.m in Sources */,
 				F4F60CB11C23CA6B0021457F /* main.m in Sources */,
 				F4F60CBF1C23CA6B0021457F /* ZPCoverView.m in Sources */,
