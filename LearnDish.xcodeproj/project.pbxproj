@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		067612BF30D0F979BFC8F8AF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D818D3183A10EC0FB75B1 /* Pods.framework */; };
 		F44933A51C214536009EFA68 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44933A41C214536009EFA68 /* WebKit.framework */; };
+		F4E3FBE51C2CD060003AC796 /* UINavigationBar+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E3FBE41C2CD060003AC796 /* UINavigationBar+Addition.m */; };
 		F4F60CA61C23CA6B0021457F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C711C23CA6B0021457F /* Assets.xcassets */; };
 		F4F60CA71C23CA6B0021457F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C731C23CA6B0021457F /* LaunchScreen.storyboard */; };
 		F4F60CA81C23CA6B0021457F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F60C751C23CA6B0021457F /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		F44933A41C214536009EFA68 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F4AD6F911C1E9E6D0013845E /* LearnDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AD6F951C1E9E6D0013845E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4E3FBE31C2CD060003AC796 /* UINavigationBar+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Addition.h"; sourceTree = "<group>"; };
+		F4E3FBE41C2CD060003AC796 /* UINavigationBar+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Addition.m"; sourceTree = "<group>"; };
 		F4F60C711C23CA6B0021457F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F60C741C23CA6B0021457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F60C761C23CA6B0021457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				F4F60C791C23CA6B0021457F /* NSString+ZP_MD5.m */,
 				F4F60C7A1C23CA6B0021457F /* UIImageView+DishImage.h */,
 				F4F60C7B1C23CA6B0021457F /* UIImageView+DishImage.m */,
+				F4E3FBE31C2CD060003AC796 /* UINavigationBar+Addition.h */,
+				F4E3FBE41C2CD060003AC796 /* UINavigationBar+Addition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 			files = (
 				F4F60CB41C23CA6B0021457F /* AppDelegate.m in Sources */,
 				F4F60CBE1C23CA6B0021457F /* ZPObjectResponse.swift in Sources */,
+				F4E3FBE51C2CD060003AC796 /* UINavigationBar+Addition.m in Sources */,
 				F4F60CB01C23CA6B0021457F /* ViewController.m in Sources */,
 				F4F60CAA1C23CA6B0021457F /* UIImageView+DishImage.m in Sources */,
 				F4F60CAE1C23CA6B0021457F /* ZPDishSearchResultController.m in Sources */,

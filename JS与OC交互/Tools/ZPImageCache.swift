@@ -10,7 +10,7 @@ import UIKit
 
 class ZPImageCache: NSObject {
 
-    var cache : NSCache?
+    var cache : NSCache = NSCache.init()
     var ioQueue : dispatch_queue_t!
     
     let ZPCacheName = "com.zp.JS与OC交互";
@@ -22,34 +22,38 @@ class ZPImageCache: NSObject {
     }
     override init() {
         self.ioQueue = dispatch_queue_create("com.html.dataCache", DISPATCH_QUEUE_SERIAL);
-        cache = NSCache?.init()
-        cache?.name = ZPCacheName;
+        cache.name = ZPCacheName;
     }
     
     func memoryCache(forkey key: String)-> NSData {
-        let objc =  self.cache?.objectForKey(key) as! ZPObjectResponse;
+        let objc =  self.cache.objectForKey(key) as! ZPObjectResponse;
         return objc.data!;
     }
     
-    func diskCache(forKey key: String) -> NSData? {
-        let objc =  self.cache?.objectForKey(key) as! ZPObjectResponse;
-        if (objc.data != nil) {
-        return objc.data!;
+    func diskCache(forKey key: String) -> AnyObject? {
+       
+        
+        //如果值可能为空用？ 使用! 取出对象的不为空值
+        var objc  =  self.cache.objectForKey(key) as? ZPObjectResponse
+      
+        if (objc != nil && objc!.data != nil && objc!.response != nil) {
+              return objc;
         }
+      
         
         return self.objectFromDiskCacheForkey(key);
         
     }
-    func objectFromDiskCacheForkey(key: String) -> NSData? {
+    func objectFromDiskCacheForkey(key: String) -> AnyObject? {
         let path = self.cachePathForKey(forkey: key)
         let data = NSData.dataWithContentsOfMappedFile(path) as? NSData
-        if (data != nil)  {
-          let object =  NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! ZPObjectResponse;
-            if object.data != nil {
-                self.cache?.setObject(object, forKey: key);
-                return object.data!;
+        if data != nil {
+            let object =  NSKeyedUnarchiver.unarchiveObjectWithData(data!) as? ZPObjectResponse;
+            if (object!.data != nil && object!.response != nil) {
+                self.cache.setObject(object!, forKey: key);
+                return object!;
             }
-            
+            return object!;
         }
         return nil;
     }
@@ -57,7 +61,7 @@ class ZPImageCache: NSObject {
         storeObject(objeResponse, forKey: key, toDisk: true);
     }
     func storeObject(objeResponse :ZPObjectResponse, forKey key :String, toDisk isDisk: Bool) {
-        self.cache?.setObject(objeResponse, forKey: key);
+        self.cache.setObject(objeResponse, forKey: key);
         if !isDisk {
             return
         }

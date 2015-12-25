@@ -46,7 +46,7 @@
             }
         }
         //步骤1
-        TFHppleElement *contentElement = [[hpple searchWithXPathQuery:@"//div[@class=\"editnew edit\"]"] firstObject];
+        TFHppleElement *contentElement = [[hpple searchWithXPathQuery:@"//div[@class=\"editnew edit\"] | //div[@class=\"edit\"]"] firstObject];
          NSString *content = [contentElement raw];
         if (content) {
             
@@ -76,8 +76,9 @@
                 
             }
             _cMethod = finishContent;
-            finish();
+           
         }
+         finish();
     });
 
 }

@@ -26,7 +26,7 @@ class ZPImageCacheProtocol: NSURLProtocol ,NSURLConnectionDataDelegate {
         }
         if (imageURL.pathExtension == "jpg" ) || (imageURL.pathExtension == "png"){
 
-            return false;
+            return true;
         }
         return false;
     }
@@ -39,9 +39,18 @@ class ZPImageCacheProtocol: NSURLProtocol ,NSURLConnectionDataDelegate {
       return  super.requestIsCacheEquivalent(a, toRequest: b);
     }
     override func startLoading() {
-        
+        var imgCache = ZPImageCache.shareImageCache()
+        var objc = imgCache.diskCache(forKey: (self.request.URL?.absoluteString)!) as? ZPObjectResponse
+        if  (objc != nil && objc!.data != nil && objc!.response != nil) {
+            var response: NSURLResponse = objc!.response!;
+            var data : NSData  = objc!.data! ;
+            self.client?.URLProtocol(self, didReceiveResponse: response, cacheStoragePolicy: NSURLCacheStoragePolicy.NotAllowed);
+            self.client?.URLProtocol(self, didLoadData: data);
+            self.client?.URLProtocolDidFinishLoading(self);
+            return
+        }
         let newRequest  = self.request.mutableCopy() as! NSMutableURLRequest;
-        newRequest.timeoutInterval = 60;
+//        newRequest.timeoutInterval = 60;
         NSURLProtocol.setProperty(true, forKey: "kZPImageCacheProtocolKey", inRequest: newRequest);
         
         connect = NSURLConnection.init(request: newRequest, delegate: self);

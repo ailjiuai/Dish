@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
-//    if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_8_0) {
+    if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_8_0) {
          _webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
         _webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
         [[_webView scrollView] setDecelerationRate:UIScrollViewDecelerationRateNormal];
@@ -42,14 +42,14 @@
         _webView.delegate = self;
         
          [self.view addSubview:_webView];
-//    }else
-//    {
-//        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc]init];
-//        wkWebView= [[WKWebView alloc]initWithFrame:self.view.bounds configuration:config];
-//        wkWebView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
-//        wkWebView.scrollView.scrollIndicatorInsets = wkWebView.scrollView.contentInset;
-//        [self.view addSubview:wkWebView];
-//    }
+    }else
+    {
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc]init];
+        wkWebView= [[WKWebView alloc]initWithFrame:self.view.bounds configuration:config];
+        wkWebView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+        wkWebView.scrollView.scrollIndicatorInsets = wkWebView.scrollView.contentInset;
+        [self.view addSubview:wkWebView];
+    }
     [MBProgressHUD showHUDAddedTo:_webView animated:YES];
     [[ZPHTTPClient shareClient] requestWithMethod:get url:_htmlURL pramater:nil response:^(NSError *error, id responese) {
 
